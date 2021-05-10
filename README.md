@@ -16,7 +16,7 @@ This academic project is a full-stack web application with an architecture patte
 - Please click [PHP CMS](https://myprojectcms.tk/mushroom) to look at the CMS and Restful API on Google Cloud VM which I deployed. The CMS permits user to manage content including uploading images with Server-Side Rendering.
 ## Effect display
 ### WEB view
-![HOME](https://github.com/lin00170/AgularFullStack/blob/main/picture/store.gif)
+![HOME](https://github.com/lin00170/AngularFullStack/blob/master/picture/store.gif)
 ### CMS view 
-![index](https://github.com/lin00170/AgularFullStack/blob/main/picture/cms.gif)
+![index](https://github.com/lin00170/AngularFullStack/blob/master/picture/cms.gif)
 
