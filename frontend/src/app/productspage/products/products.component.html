@@ -1,0 +1,131 @@
+
+<div class="container">
+  <div class="sort">
+    
+    <div class="option">
+      <mat-select id="sortId" (selectionChange)="priceSort()">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-select>
+
+  </div>
+  <div></div>
+  <div class="res">
+    {{details.length}}  results!
+  </div>
+</div>
+  <mat-drawer-container>
+    
+  
+     <mat-drawer  mode="side" opened>
+
+      <div class="price">
+        <h1 style="color:#C2185B">My preference</h1>
+        <h2>Price</h2>
+      <mat-form-field>
+        <mat-label matPrefix>$</mat-label>
+        <input matInput  type="text" #pMin>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label matPrefix>$</mat-label>
+        <input matInput type="text" #pMax>
+      </mat-form-field>
+      <button mat-mini-fab color="accent" (click)="priceFilter(pMin.value,pMax.value)">  
+        <mat-icon>check</mat-icon>
+      </button>
+      </div>
+    
+      <div class="rate">
+        <h2>Rate</h2>
+        <div class="rate-mini" style="color: yellow;">
+       <div>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+       </div>   
+       <mat-icon style="cursor:pointer" (click)="rateFilter(4)"> vertical_align_top</mat-icon>
+        </div>
+      
+      
+        <div class="rate-mini" style="color: yellow">
+          <div>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+          </div>
+          <mat-icon (click)="rateFilter(4)"style="color:White;cursor:pointer"> vertical_align_top</mat-icon>
+        </div>
+     
+      
+        <div class="rate-mini" style="color: yellow">
+          <div>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+          </div>
+          <mat-icon (click)="rateFilter(3)" style="color:White;cursor:pointer" > vertical_align_top</mat-icon>
+        </div>
+
+        <div class="rate-mini" style="color: yellow">
+          <div>
+            <mat-icon>grade</mat-icon>
+            <mat-icon>grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+          </div>
+          <mat-icon (click)="rateFilter(2)" style="color:White;cursor:pointer" > vertical_align_top</mat-icon>
+        </div>
+
+        <div class="rate-mini" style="color: yellow">
+          <div>
+            <mat-icon>grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+            <mat-icon style="color: #e6ebf1">grade</mat-icon>
+          </div>
+         <mat-icon (click)="rateFilter(1)" style="color:White;cursor:pointer" > vertical_align_top</mat-icon>
+        </div>
+      </div>
+    
+    </mat-drawer>
+    
+
+    <!--there is a content about mushroom list-->
+    <mat-drawer-content>
+      <mat-card  [routerLink]="['/detail',detail.id]" *ngFor="let detail of details" class="example-card" >
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{detail.title}}</mat-card-title>
+        <mat-card-subtitle>{{detail.subtitle}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{detail.imgUrl}}" alt="Photo of lion's mane">
+      <mat-card-content>
+        <p>
+         Price:{{detail.price}}CAD
+        </p>
+        <div *ngFor="let rate of detail.rate" style="float:left">
+          <mat-icon>{{rate.name}}</mat-icon>
+         </div>
+       
+      </mat-card-content>
+      <mat-card-actions style="color: rgb(240, 233, 240); text-align: right;font-weight: bold;">
+        <button mat-button>Buy it now!</button>
+      </mat-card-actions>
+    </mat-card>
+                
+    
+  </mat-drawer-content>
+  
+  </mat-drawer-container>
+</div>
+
+

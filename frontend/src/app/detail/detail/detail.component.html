@@ -1,0 +1,50 @@
+
+<div class="title" style="background-color:#424242">
+  <div>
+    <img src="{{detail.imgUrl}}" alt="mushroom product oyster">
+  </div>
+  <div class="content" >
+    <p>{{detail.title}}</p>
+    <div  class="rate-mini" >
+      <div *ngFor="let rate of detail.rate" [ngStyle]="{color:'darkorange'}">
+        <mat-icon>{{rate.name}}</mat-icon>
+       </div>
+    </div>
+
+
+    <mat-divider></mat-divider>
+    <h2 class="price">PRICE: ${{detail.price}}</h2>
+  <div class="number">
+    Number:
+    <button mat-mini-fab  color="accent"(click)="remove()">
+      <mat-icon>remove</mat-icon>
+    </button>
+    <input type="text" value="{{num}}">
+    <button mat-mini-fab color="accent" (click)="add()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+    <div class="add-to">
+      <button mat-flat-button color="primary">ADD TO CART</button>
+      <button mat-flat-button color="primary">BUY IT NOW</button>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="spec">
+      <p>{{description}}</p>
+    </div>
+  </div>
+  <div class="comment">
+    <mat-divider></mat-divider>
+    <div>
+         <p>
+        coment
+      </p>
+      <p>
+        coment
+      </p>
+
+    </div>
+  </div>
+
+
+

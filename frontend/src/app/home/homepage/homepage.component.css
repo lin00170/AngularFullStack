@@ -1,0 +1,42 @@
+.course{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0 5px 0;
+}
+
+.features{
+  width: 20%;
+  min-width: 200px;
+  margin: 20px;
+  overflow: hidden;
+  position:relative;
+}
+.features img{
+  display: block;
+  width: 100%;
+}
+.imgBox{
+  transform:scale(1,1);transition: all .3s ease-out;
+}
+.imgBox:hover{
+  font-size: 30px;
+  font-weight: bold;
+  transform:scale(1.5,1.5);
+}
+
+.imgBox .img-tip{
+  position:absolute;
+  width: 50%;
+  background-color: #daa0c8;
+  color: rgb(37, 36, 36);
+  top:50%;
+  right: 50%;
+  transform:translate(50%,-50%);
+  opacity: .7;
+  line-height: 100%;
+  text-align: center;
+  align-items: center;
+  font-size: 20px;
+
+}
