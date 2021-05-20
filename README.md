@@ -12,7 +12,7 @@ This academic project is a full-stack web application with an architecture patte
 - Understand the process of the browser. 
 &emsp;
 ## linking to the website
-- Please click [mushroom sore](https://lin00170.github.io/mushroom/) to visit the Front-end of the website building with Angular.
+- Please click [Fungi store](https://lin00170.github.io/mushroom/) to visit the Front-end of the website building with Angular.
 - Please click [PHP CMS](https://myprojectcms.tk/mushroom) to look at the CMS on Google Cloud VM. 
 - 
 ## Effect display
